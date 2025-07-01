@@ -1,0 +1,49 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table Sensors (sensorId:string, sensorType:string, locationOnProduct:string, productId:string) 
+.create-or-alter table Sensors ingestion csv mapping 'Sensors_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"sensorId","datatype":""},{"Properties":{"Ordinal":"1"},"column":"sensorType","datatype":""},{"Properties":{"Ordinal":"2"},"column":"locationOnProduct","datatype":""},{"Properties":{"Ordinal":"3"},"column":"productId","datatype":""}]
+```
+.create-merge table SensorData (timestamp:datetime, sensorValue:string, unit:string, sensorId:string, sessionId:string, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table UserProfile (userId:string, age:long, gender:string, weight:real) 
+.create-or-alter table UserProfile ingestion csv mapping 'UserProfile_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"userId","datatype":""},{"Properties":{"Ordinal":"1"},"column":"age","datatype":""},{"Properties":{"Ordinal":"2"},"column":"gender","datatype":""},{"Properties":{"Ordinal":"3"},"column":"weight","datatype":""}]
+```
+.create-merge table ActivitySession (sessionId:string, startTime:datetime, endTime:datetime, userId:string, productId:string, environmentId:string, activityTypeId:string) 
+.create-or-alter table ActivitySession ingestion csv mapping 'ActivitySession_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"sessionId","datatype":""},{"Properties":{"Ordinal":"1"},"column":"startTime","datatype":""},{"Properties":{"Ordinal":"2"},"column":"endTime","datatype":""},{"Properties":{"Ordinal":"3"},"column":"userId","datatype":""},{"Properties":{"Ordinal":"4"},"column":"productId","datatype":""},{"Properties":{"Ordinal":"5"},"column":"environmentId","datatype":""},{"Properties":{"Ordinal":"6"},"column":"activityTypeId","datatype":""}]
+```
+.create-merge table ActivityType (activityTypeId:string, activityTypeName:string, intensityLevel:string) 
+.create-or-alter table ActivityType ingestion csv mapping 'ActivityType_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"activityTypeId","datatype":""},{"Properties":{"Ordinal":"1"},"column":"activityTypeName","datatype":""},{"Properties":{"Ordinal":"2"},"column":"intensityLevel","datatype":""}]
+```
+.create-merge table Environment (environmentId:string, description:string, ambientTemperature:real, humidity:real, terrain:string) 
+.create-or-alter table Environment ingestion csv mapping 'Environment_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"environmentId","datatype":""},{"Properties":{"Ordinal":"1"},"column":"description","datatype":""},{"Properties":{"Ordinal":"2"},"column":"ambientTemperature","datatype":""},{"Properties":{"Ordinal":"3"},"column":"humidity","datatype":""},{"Properties":{"Ordinal":"4"},"column":"terrain","datatype":""}]
+```
+.create-merge table Material (materialId:string, materialName:string, materialType:string, thermalConductivity:real, elasticity:real) 
+.create-or-alter table Material ingestion csv mapping 'Material_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"materialId","datatype":""},{"Properties":{"Ordinal":"1"},"column":"materialName","datatype":""},{"Properties":{"Ordinal":"2"},"column":"materialType","datatype":""},{"Properties":{"Ordinal":"3"},"column":"thermalConductivity","datatype":""},{"Properties":{"Ordinal":"4"},"column":"elasticity","datatype":""}]
+```
+.create-merge table PerformanceMetric (metricid:string, comfortScore:real, peakPressure:real, avgHumidity:real, tempDelta:real, sessionId:string) 
+.create-or-alter table PerformanceMetric ingestion csv mapping 'PerformanceMetric_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"metricid","datatype":""},{"Properties":{"Ordinal":"1"},"column":"comfortScore","datatype":""},{"Properties":{"Ordinal":"2"},"column":"peakPressure","datatype":""},{"Properties":{"Ordinal":"3"},"column":"avgHumidity","datatype":""},{"Properties":{"Ordinal":"4"},"column":"tempDelta","datatype":""},{"Properties":{"Ordinal":"5"},"column":"sessionId","datatype":""}]
+```
+.create-merge table ZavaCustomerFeedback (id:string, chatappid:string, comment:string, sentiment:string, sentimenttype:string, classification:string, product:string, country:string, city:string, channel:string, primary_activity:string, EventProcessedUtcTime:datetime) 
+.create-merge table Inventory (productId:string, productName:string, productType:string, designId:string, materialId:string, inventorySKU:long, stockStatus:string, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table CustomerFeedback (id:string, chatappid:string, comment:string, sentiment:real, sentimenttype:string, classification:string, product:string, country:string, city:string, channel:string, primary_activity:string) 
+.create-or-alter table CustomerFeedback ingestion csv mapping 'feedback10mil_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"id","datatype":""},{"Properties":{"Ordinal":"1"},"column":"chatappid","datatype":""},{"Properties":{"Ordinal":"2"},"column":"comment","datatype":""},{"Properties":{"Ordinal":"3"},"column":"sentiment","datatype":""},{"Properties":{"Ordinal":"4"},"column":"sentimenttype","datatype":""},{"Properties":{"Ordinal":"5"},"column":"classification","datatype":""},{"Properties":{"Ordinal":"6"},"column":"product","datatype":""},{"Properties":{"Ordinal":"7"},"column":"country","datatype":""},{"Properties":{"Ordinal":"8"},"column":"city","datatype":""},{"Properties":{"Ordinal":"9"},"column":"channel","datatype":""},{"Properties":{"Ordinal":"10"},"column":"primary_activity","datatype":""}]
+```
+.alter column SensorData.['timestamp'] policy encoding type = 'SpreadNumeric'
+.alter column SensorData.['PartitionId'] policy encoding type = 'SpreadNumeric'
