@@ -25,6 +25,11 @@
         "type": "Core"
     },
     {
+        "name": "ZavaLakehouse.Lakehouse",
+        "id": "426adfad-a02a-82c7-47da-ea20568ddeb5",
+        "type": "Core"
+    },
+    {
         "name": "Ingest_Inventory_Data_Realtime.Eventstream",
         "id": "73b20a10-4282-4859-bf5e-7ec758f25d4d",
         "type": "Core"
