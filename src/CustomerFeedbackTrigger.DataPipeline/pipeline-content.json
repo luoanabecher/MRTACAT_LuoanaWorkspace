@@ -40,15 +40,6 @@
                     }
                 }
             }
-        ],
-        "logicAppsConnectionPayload": {
-            "id": "/subscriptions/09f6f066-0971-4daf-92c2-b011d49b3f48/resourceGroups/connections-96d566eb-4113-4218-aebe-dad045fab59a/providers/Microsoft.Web/connections/1_defd1f8c-d5ac-40a2-8525-27ae5d8caf4b_ecc75266-e789-4c4a-bdc4-949d2e4cda17",
-            "properties": {
-                "api": {
-                    "name": "office365",
-                    "id": "/subscriptions/09f6f066-0971-4daf-92c2-b011d49b3f48/providers/Microsoft.Web/locations/northcentralus/managedApis/office365"
-                }
-            }
-        }
+        ]
     }
 }
