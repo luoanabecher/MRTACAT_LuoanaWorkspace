@@ -1,1 +1,4 @@
-{"retentionTimeInDays": 1, "eventThroughputLevel": "Low"}
+{
+    "retentionTimeInDays": 1,
+    "eventThroughputLevel": "Low"
+}

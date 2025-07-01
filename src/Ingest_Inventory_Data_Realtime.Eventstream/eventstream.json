@@ -1,1 +1,119 @@
-{"sources": [{"id": "d343ec12-004e-4da1-bd14-149d95ec8910", "name": "Inventory", "type": "CustomEndpoint", "properties": {}}], "destinations": [{"id": "4a7aed12-c568-4280-827e-39be41374524", "name": "Eventhouse", "type": "Eventhouse", "properties": {"dataIngestionMode": "ProcessedIngestion", "workspaceId": "96d566eb-4113-4218-aebe-dad045fab59a", "itemId": "776ee9bf-9c0c-432b-9205-9d6b82d58528", "databaseName": "ZavaEventHouse", "tableName": "inventory", "inputSerialization": {"type": "Json", "properties": {"encoding": "UTF8"}}}, "inputNodes": [{"name": "Ingest_Products_Data_Realtime-stream"}], "inputSchemas": [{"name": "Ingest_Products_Data_Realtime-stream", "schema": {"columns": [{"name": "productId", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "productName", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "productType", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "designId", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "materialId", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "inventorySKU", "type": "BigInt", "fields": null, "items": null}, {"name": "stockStatus", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "EventProcessedUtcTime", "type": "DateTime", "fields": null, "items": null}, {"name": "PartitionId", "type": "BigInt", "fields": null, "items": null}, {"name": "EventEnqueuedUtcTime", "type": "DateTime", "fields": null, "items": null}]}}]}], "streams": [{"id": "3117107f-50a4-4942-b7d3-e6822eb6bbd8", "name": "Ingest_Products_Data_Realtime-stream", "type": "DefaultStream", "properties": {}, "inputNodes": [{"name": "Inventory"}]}], "operators": [], "compatibilityLevel": "1.0"}
+{
+    "sources": [
+        {
+            "id": "d343ec12-004e-4da1-bd14-149d95ec8910",
+            "name": "Inventory",
+            "type": "CustomEndpoint",
+            "properties": {}
+        }
+    ],
+    "destinations": [
+        {
+            "id": "4a7aed12-c568-4280-827e-39be41374524",
+            "name": "Eventhouse",
+            "type": "Eventhouse",
+            "properties": {
+                "dataIngestionMode": "ProcessedIngestion",
+                "workspaceId": "96d566eb-4113-4218-aebe-dad045fab59a",
+                "itemId": "73b20a10-4282-4859-bf5e-7ec758f25d4d",
+                "databaseName": "ZavaEventHouse",
+                "tableName": "inventory",
+                "inputSerialization": {
+                    "type": "Json",
+                    "properties": {
+                        "encoding": "UTF8"
+                    }
+                }
+            },
+            "inputNodes": [
+                {
+                    "name": "Ingest_Products_Data_Realtime-stream"
+                }
+            ],
+            "inputSchemas": [
+                {
+                    "name": "Ingest_Products_Data_Realtime-stream",
+                    "schema": {
+                        "columns": [
+                            {
+                                "name": "productId",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "productName",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "productType",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "designId",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "materialId",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "inventorySKU",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "stockStatus",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "EventProcessedUtcTime",
+                                "type": "DateTime",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "PartitionId",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "EventEnqueuedUtcTime",
+                                "type": "DateTime",
+                                "fields": null,
+                                "items": null
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "streams": [
+        {
+            "id": "3117107f-50a4-4942-b7d3-e6822eb6bbd8",
+            "name": "Ingest_Products_Data_Realtime-stream",
+            "type": "DefaultStream",
+            "properties": {},
+            "inputNodes": [
+                {
+                    "name": "Inventory"
+                }
+            ]
+        }
+    ],
+    "operators": [],
+    "compatibilityLevel": "1.0"
+}

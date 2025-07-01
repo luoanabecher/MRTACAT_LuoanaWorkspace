@@ -1,1 +1,102 @@
-{"sources": [{"id": "61ac16a9-5c8f-437c-845e-1a41f1292e44", "name": "InventoryFeed", "type": "SampleData", "properties": {"type": "Bicycles"}}], "destinations": [{"id": "fb5ae5e8-50de-42a0-915c-9bf0cee81b1f", "name": "Lakehouse", "type": "Lakehouse", "properties": {"workspaceId": "96d566eb-4113-4218-aebe-dad045fab59a", "itemId": "a3a81e51-745e-4603-ac46-43b518c1ef02", "schema": "", "deltaTable": "InventoryUpdate", "inputSerialization": {"type": "Json", "properties": {"encoding": "UTF8"}}}, "inputNodes": [{"name": "InventoryUpdates-stream"}], "inputSchemas": [{"name": "InventoryUpdates-stream", "schema": {"columns": [{"name": "BikepointID", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "Street", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "Neighbourhood", "type": "Nvarchar(max)", "fields": null, "items": null}, {"name": "Latitude", "type": "Float", "fields": null, "items": null}, {"name": "Longitude", "type": "Float", "fields": null, "items": null}, {"name": "No_Bikes", "type": "BigInt", "fields": null, "items": null}, {"name": "No_Empty_Docks", "type": "BigInt", "fields": null, "items": null}]}}]}], "streams": [{"id": "339f1151-3eb5-416d-8acd-079bfebcc486", "name": "InventoryUpdates-stream", "type": "DefaultStream", "properties": {}, "inputNodes": [{"name": "InventoryFeed"}]}], "operators": [], "compatibilityLevel": "1.0"}
+{
+    "sources": [
+        {
+            "id": "61ac16a9-5c8f-437c-845e-1a41f1292e44",
+            "name": "InventoryFeed",
+            "type": "SampleData",
+            "properties": {
+                "type": "Bicycles"
+            }
+        }
+    ],
+    "destinations": [
+        {
+            "id": "fb5ae5e8-50de-42a0-915c-9bf0cee81b1f",
+            "name": "Lakehouse",
+            "type": "Lakehouse",
+            "properties": {
+                "workspaceId": "96d566eb-4113-4218-aebe-dad045fab59a",
+                "itemId": "568ddeb5-ea20-47da-82c7-a02a426adfad",
+                "schema": "",
+                "deltaTable": "InventoryUpdate",
+                "inputSerialization": {
+                    "type": "Json",
+                    "properties": {
+                        "encoding": "UTF8"
+                    }
+                }
+            },
+            "inputNodes": [
+                {
+                    "name": "InventoryUpdates-stream"
+                }
+            ],
+            "inputSchemas": [
+                {
+                    "name": "InventoryUpdates-stream",
+                    "schema": {
+                        "columns": [
+                            {
+                                "name": "BikepointID",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "Street",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "Neighbourhood",
+                                "type": "Nvarchar(max)",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "Latitude",
+                                "type": "Float",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "Longitude",
+                                "type": "Float",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "No_Bikes",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                            },
+                            {
+                                "name": "No_Empty_Docks",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "streams": [
+        {
+            "id": "339f1151-3eb5-416d-8acd-079bfebcc486",
+            "name": "InventoryUpdates-stream",
+            "type": "DefaultStream",
+            "properties": {},
+            "inputNodes": [
+                {
+                    "name": "InventoryFeed"
+                }
+            ]
+        }
+    ],
+    "operators": [],
+    "compatibilityLevel": "1.0"
+}
