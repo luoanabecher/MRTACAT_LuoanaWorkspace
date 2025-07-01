@@ -31,17 +31,26 @@
     },
     {
         "name": "Ingest_Inventory_Data_Realtime.Eventstream",
-        "id": "73b20a10-4282-4859-bf5e-7ec758f25d4d",
+        "id": "8f0bff26-4935-4043-ab0e-23d5a936b348",
         "type": "Core"
     },
     {
         "name": "InventoryUpdates.Eventstream",
-        "id": "73b20a10-4282-4859-bf5e-7ec758f25d4d",
+        "id": "92f9475a-f176-45db-9205-966243f261e8",
         "type": "Core"
-    } ,
+    },
     {
         "name": "Weather.Eventstream",
         "id": "90e5d1c8-68a8-40a7-9dbd-d369b73d7376",
         "type": "Core"
+    },
+    {
+        "name": "WeatherConnector_event_stream.Eventstream",
+        "id": "eef27cb6-0c67-43f2-b755-37db30c77418",
+        "type": "Core"
+    },
+    {
+        "name": "ZavaCustomerExperience.Eventstream",
+        "id": "9e799537-7c7d-427a-b84a-1a834449ffba",
+        "type": "Core"
     }
-]

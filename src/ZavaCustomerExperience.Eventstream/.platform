@@ -1,1 +1,11 @@
-{"$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json", "metadata": {"type": "Eventstream", "displayName": "ZavaCustomerExperience"}, "config": {"version": "2.0", "logicalId": "00000000-0000-0000-0000-000000000000"}}
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+    "metadata": {
+        "type": "Eventstream",
+        "displayName": "ZavaCustomerExperience"
+    },
+    "config": {
+        "version": "2.0",
+        "logicalId": "9e799537-7c7d-427a-b84a-1a834449ffba"
+    }
+}

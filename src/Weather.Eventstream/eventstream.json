@@ -1,1 +1,15 @@
-{"sources": [], "destinations": [], "streams": [{"id": "8daab85c-0dde-4357-8d0e-917edbf9878e", "name": "Weather-stream", "type": "DefaultStream", "properties": {}, "inputNodes": []}], "operators": [], "compatibilityLevel": "1.0"}
+{
+    "sources": [],
+    "destinations": [],
+    "streams": [
+        {
+            "id": "8daab85c-0dde-4357-8d0e-917edbf9878e",
+            "name": "Weather-stream",
+            "type": "DefaultStream",
+            "properties": {},
+            "inputNodes": []
+        }
+    ],
+    "operators": [],
+    "compatibilityLevel": "1.0"
+}
