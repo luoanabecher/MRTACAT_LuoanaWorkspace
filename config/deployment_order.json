@@ -13,5 +13,15 @@
         "name": "ProductionData.KQLDatabase",
         "id": "22609c7e-11e9-4fe1-b919-a3868c6ffa53",
         "type": "Core"
+    },
+    {
+        "name": "ZavaEventHouse.Eventhouse",
+        "id": "99dd0ad7-8b58-43a4-a2d5-ac43bc9d2bf0",
+        "type": "Core"
+    },
+    {
+        "name": "ZavaEventHouse.KQLDatabase",
+        "id": "73b20a10-4282-4859-bf5e-7ec758f25d4d",
+        "type": "Core"
     }
 ]
