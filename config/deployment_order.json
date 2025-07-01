@@ -6,12 +6,12 @@
     },
     {
         "name": "ProductionData.Eventhouse",
-        "id": "",
+        "id": "2bbe0e45-5e4e-41e4-918c-43f85fe18350",
         "type": "Core"
     },
     {
         "name": "ProductionData.KQLDatabase",
-        "id": "",
+        "id": "22609c7e-11e9-4fe1-b919-a3868c6ffa53",
         "type": "Core"
     }
 ]
