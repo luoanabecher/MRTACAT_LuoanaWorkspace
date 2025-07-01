@@ -38,5 +38,10 @@
         "name": "InventoryUpdates.Eventstream",
         "id": "73b20a10-4282-4859-bf5e-7ec758f25d4d",
         "type": "Core"
+    } ,
+    {
+        "name": "Weather.Eventstream",
+        "id": "90e5d1c8-68a8-40a7-9dbd-d369b73d7376",
+        "type": "Core"
     }
 ]
